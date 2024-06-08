@@ -37,7 +37,7 @@ const Bookshelf = () => {
         {books
           .slice((page - 1) * booksPerPage, page * booksPerPage)
           .map((book) => (
-            <div key={book.key} className="book-shelf-card">
+            <div key={book.key} className="book-card">
               <img src={bookCoverUrl(book.cover_i)} alt={book.title} />
               <h3>{book.title}</h3>
               <button onClick={() => removeBook(book.key)}>Remove</button>
